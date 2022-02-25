@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap");
+
+@mixin flexContainer {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+// the color that we can use un the project
+
+$sombre: #001d3d;
+
+$yellow: #fee440;
+
+$yellow-sombre: #ffc300;
+
+$white: #f1f1f1f1;
+
+$green-sombre: #2b9348;
+
+$green-clair: #d4d700;
+
+// the font that we can use in the project
+
+$font-1: "Source Sans Pro";
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  color: $white;
+
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  width: 100vw;
+  height: 100vh;
+
+  @include flexContainer;
+
+  .container {
+    position: relative;
+    padding: 40px 0px 0px 20px;
+
+    width: 590px;
+    height: 100%;
+    border-radius: 15px;
+
+    background-image: url(../../asset/img/meteo.jpg);
+    background-size: cover;
+
+    &::before {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgb(0, 0, 0);
+    }
+  }
+}
